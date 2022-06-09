@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+<h1>Liste des étudiants</h1>
+
+<a class="create" href="{{ url_for('add') }}"><b>Ajouter un étudiant</b></a>
+
+<ul>
+    {% for student in students %}
+        <li>
+            <p><b>{{student.name}}</b></p>
+            <a class="blue" href="/{{student.id}}/update/"><b>update</b></a>
+            <a class="delete" href="/{{student.id}}/delete/"><b>delete</b></a>
+        </li>
+    {% endfor %}
+</ul>
+
+
+
+{% endblock %}

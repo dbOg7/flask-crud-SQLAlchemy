@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<h3>Voulez-vous supprimer l'étudiant {{students.name}} de la base de donnés ?</h3>
+
+<form action='' method="POST">
+    <input type ="submit" value="oui">
+    <a href='/'>annuler</a>
+</form>
+{% endblock %}
